@@ -25,6 +25,8 @@
 		94F3033418F2E9100087A68F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F3030F18F2E9100087A68F /* CoreData.framework */; };
 		94F3033C18F2E9100087A68F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94F3033A18F2E9100087A68F /* InfoPlist.strings */; };
 		94F3033E18F2E9100087A68F /* Quiz7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3033D18F2E9100087A68F /* Quiz7Tests.m */; };
+		94F3034918F2E96B0087A68F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F3034718F2E96B0087A68F /* Model.xcdatamodeld */; };
+		94F3034C18F2EA700087A68F /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3034B18F2EA700087A68F /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		94F3033918F2E9100087A68F /* Quiz7Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quiz7Tests-Info.plist"; sourceTree = "<group>"; };
 		94F3033B18F2E9100087A68F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94F3033D18F2E9100087A68F /* Quiz7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiz7Tests.m; sourceTree = "<group>"; };
+		94F3034818F2E96B0087A68F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		94F3034A18F2EA700087A68F /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		94F3034B18F2EA700087A68F /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F3030C18F2E9100087A68F /* CoreGraphics.framework in Frameworks */,
 				94F3031018F2E9100087A68F /* CoreData.framework in Frameworks */,
+				94F3030C18F2E9100087A68F /* CoreGraphics.framework in Frameworks */,
 				94F3030E18F2E9100087A68F /* UIKit.framework in Frameworks */,
 				94F3030A18F2E9100087A68F /* Foundation.framework in Frameworks */,
 			);
@@ -92,6 +97,7 @@
 		94F302FD18F2E9100087A68F = {
 			isa = PBXGroup;
 			children = (
+				94F3034718F2E96B0087A68F /* Model.xcdatamodeld */,
 				94F3031118F2E9100087A68F /* Quiz7 */,
 				94F3033718F2E9100087A68F /* Quiz7Tests */,
 				94F3030818F2E9100087A68F /* Frameworks */,
@@ -132,6 +138,8 @@
 				94F3032718F2E9100087A68F /* Quiz7DetailViewController.m */,
 				94F3032918F2E9100087A68F /* Images.xcassets */,
 				94F3032018F2E9100087A68F /* Quiz7.xcdatamodeld */,
+				94F3034A18F2EA700087A68F /* Task.h */,
+				94F3034B18F2EA700087A68F /* Task.m */,
 				94F3031218F2E9100087A68F /* Supporting Files */,
 			);
 			path = Quiz7;
@@ -264,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F3034C18F2EA700087A68F /* Task.m in Sources */,
 				94F3032818F2E9100087A68F /* Quiz7DetailViewController.m in Sources */,
 				94F3032218F2E9100087A68F /* Quiz7.xcdatamodeld in Sources */,
 				94F3032518F2E9100087A68F /* Quiz7MasterViewController.m in Sources */,
 				94F3031818F2E9100087A68F /* main.m in Sources */,
 				94F3031C18F2E9100087A68F /* Quiz7AppDelegate.m in Sources */,
+				94F3034918F2E96B0087A68F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +502,16 @@
 			);
 			currentVersion = 94F3032118F2E9100087A68F /* Quiz7.xcdatamodel */;
 			path = Quiz7.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		94F3034718F2E96B0087A68F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94F3034818F2E96B0087A68F /* Model.xcdatamodel */,
+			);
+			currentVersion = 94F3034818F2E96B0087A68F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

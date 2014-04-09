@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <CoreData/CoreData.h>
+#import "Task.h"
 
 @interface Quiz7MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

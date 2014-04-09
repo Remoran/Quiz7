@@ -13,6 +13,7 @@
 @end
 
 @implementation Quiz7DetailViewController
+@synthesize dismissBlock;
 
 #pragma mark - Managing the detail item
 
@@ -31,7 +32,9 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        [self.urgencySlider setValue:[self.detailItem urgency]];
+        [self.nameField setText:[self.detailItem name]];
+        [self.datePicker setDate:[self.detailItem dueDate]];
     }
 }
 
@@ -46,6 +49,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (IBAction)save:(id)sender {
+    [self.detailItem setUrgency:[self.urgencySlider value]];
+    [self.detailItem setName:[self.nameField text]];
+    [self.detailItem setDueDate:[self.datePicker date]];
+    [self.presentingViewController dismissViewControllerAnimated:NO completion:dismissBlock];
 }
 
 @end
